@@ -22,19 +22,24 @@ h1 {
     margin: 0;
 }
 
-nav ul {
-    padding: 0;
-    list-style: none;
+nav.segmentador {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+nav.segmentador button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #005999;
+    color: white;
+    cursor: pointer;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+nav.segmentador button:hover {
+    background: #00477a;
 }
 
 section {

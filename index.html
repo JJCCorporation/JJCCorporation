@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JJC Corporation EIRL - Consultora en Análisis de Datos</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> <!-- Reemplaza con tu API Key de Google Maps -->
 </head>
 <body>
     <header>
@@ -12,17 +13,15 @@
             <div class="logo-container">
                 <img src="logo-datos.png" alt="Logo de JJC Corporation EIRL">
             </div>
+            <nav class="segmentador">
+                <button onclick="location.href='#servicios'">Servicios</button>
+                <button onclick="location.href='#sobre-nosotros'">Sobre Nosotros</button>
+                <button onclick="location.href='#testimonios'">Testimonios</button>
+                <button onclick="location.href='#contacto'">Contacto</button>
+                <button onclick="location.href='#ubicacion'">Ubicación</button>
+            </nav>
             <h1>JJC Corporation EIRL</h1>
             <p>Consultora en Análisis de Datos e Inteligencia de Negocios</p>
-            <nav>
-                <ul>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#ubicacion">Ubicación</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
@@ -84,6 +83,25 @@
         <a href="https://wa.me/18293417496" target="_blank" class="whatsapp-button">Chatea con nosotros en WhatsApp</a>
     </section>
 
+    <section id="ubicacion" class="container">
+        <h2>Nuestra Ubicación</h2>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+        <script>
+            function initMap() {
+                var location = { lat: 18.48577381756368, lng: -69.96459730000001 }; // Cambia a tus coordenadas
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: location
+                });
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initMap);
+        </script>
+    </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 JJC Corporation EIRL - Todos los derechos reservados.</p>
@@ -98,4 +116,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
