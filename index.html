@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JJC Corporation EIRL - Consultora en Análisis de Datos</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbKbqI2fHLWb50YSeh2_JZxFGTOyRt38"></script> <!-- Reemplaza con tu API Key de Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbKbqI2fHLWb50YSeh2_JZxFGTOyRt38"></script>
 </head>
 <body>
     <header>
@@ -19,12 +19,14 @@
                 <button onclick="location.href='#testimonios'">Testimonios</button>
                 <button onclick="location.href='#contacto'">Contacto</button>
                 <button onclick="location.href='#ubicacion'">Ubicación</button>
+                <button onclick="location.href='#dashboards'">Dashboards</button> <!-- Nuevo botón para Dashboards -->
             </nav>
             <h1>JJC Corporation EIRL</h1>
             <p>Consultora en Análisis de Datos e Inteligencia de Negocios</p>
         </div>
     </header>
 
+    <!-- Servicios -->
     <section id="servicios" class="container">
         <h2>Nuestros Servicios</h2>
         <div class="servicios-lista">
@@ -43,6 +45,7 @@
         </div>
     </section>
 
+    <!-- Testimonios -->
     <section id="testimonios" class="container">
         <h2>Testimonios de Clientes</h2>
         <div class="testimonio">
@@ -55,6 +58,7 @@
         </div>
     </section>
 
+    <!-- Contacto y WhatsApp -->
     <section id="contacto" class="container">
         <h2>Contáctanos</h2>
         <form>
@@ -70,15 +74,37 @@
             <button type="submit">Enviar</button>
         </form>
         <p>O contáctanos directamente por WhatsApp:</p>
-        <a href="https://wa.me/18293417496" target="_blank" class="whatsapp-button">Chatea con nosotros en WhatsApp</a>
+        <a href="https://wa.me/18293417496" target="_blank" class="whatsapp-button">
+            <img src="whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo"> Chatea con nosotros en WhatsApp
+        </a>
     </section>
 
+    <!-- Dashboards Realizados -->
+    <section id="dashboards" class="container">
+        <h2>Dashboards Realizados</h2>
+        <div class="dashboards-lista">
+            <div class="dashboard">
+                <img src="dashboard1.jpg" alt="Dashboard 1" class="dashboard-img">
+                <p>Dashboard de Ventas</p>
+            </div>
+            <div class="dashboard">
+                <img src="dashboard2.jpg" alt="Dashboard 2" class="dashboard-img">
+                <p>Dashboard de Marketing</p>
+            </div>
+            <div class="dashboard">
+                <img src="dashboard3.jpg" alt="Dashboard 3" class="dashboard-img">
+                <p>Dashboard Financiero</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
     <section id="ubicacion" class="container">
         <h2>Nuestra Ubicación</h2>
         <div id="map" style="height: 400px; width: 100%;"></div>
         <script>
             function initMap() {
-                var location = { lat: 18.48577381756368, lng: -69.96459730000001 }; // Cambia a tus coordenadas
+                var location = { lat: 18.48577381756368, lng: -69.96459730000001 }; 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 15,
                     center: location

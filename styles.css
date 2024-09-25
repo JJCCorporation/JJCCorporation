@@ -113,7 +113,8 @@ form button:hover {
 }
 
 .whatsapp-button {
-    display: inline-block;
+    display: inline-flex; /* Para alinear el logo y texto */
+    align-items: center;
     background-color: #25D366;
     color: white;
     padding: 10px 20px;
@@ -123,6 +124,29 @@ form button:hover {
 
 .whatsapp-button:hover {
     background-color: #128C7E;
+}
+
+.whatsapp-logo {
+    width: 24px; /* Ajustar tamaño del logo de WhatsApp */
+    height: auto;
+    margin-right: 8px; /* Espacio entre el logo y el texto */
+}
+
+.dashboards-lista {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.dashboard {
+    text-align: center;
+    margin: 10px;
+}
+
+.dashboard-img {
+    width: 100%; /* Ajustar imagen al contenedor */
+    max-width: 300px; /* Máximo ancho de la imagen */
+    border-radius: 5px;
 }
 
 footer {
