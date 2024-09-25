@@ -2,19 +2,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('fondo-analisis-datos.jpg'); /* Imagen de fondo acorde al análisis de datos */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333; /* Color oscuro para texto en vez de blanco */
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para destacar texto sobre la imagen */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 header {
-    background-color: #0073e6;
-    color: white;
+    background-color: rgba(0, 115, 230, 0.9); /* Fondo azul con transparencia */
+    color: #fff;
     padding: 20px 0;
+    border-radius: 10px;
 }
 
 .logo-container {
@@ -23,7 +31,7 @@ header {
 }
 
 .logo {
-    width: 150px; /* Tamaño del logo ajustado */
+    width: 190px; /* Tamaño del logo ajustado */
     height: auto;
 }
 
@@ -48,12 +56,12 @@ header {
 
 h1 {
     font-size: 36px;
-    color: white;
+    color: black;
 }
 
 p {
     font-size: 18px;
-    color: white;
+    color: black;
 }
 
 .servicios-lista {
@@ -67,6 +75,7 @@ p {
     padding: 20px;
     border-radius: 5px;
     width: 30%;
+    color: #333; /* Color oscuro para asegurar contraste */
 }
 
 .servicio h3 {
@@ -78,6 +87,7 @@ p {
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 10px;
+    color: #333;
 }
 
 form input, form textarea {
@@ -86,6 +96,7 @@ form input, form textarea {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: #333;
 }
 
 form button {
@@ -115,10 +126,11 @@ form button:hover {
 }
 
 footer {
-    background-color: #0073e6;
+    background-color: rgba(0, 115, 230, 0.9);
     color: white;
     padding: 20px 0;
     text-align: center;
+    border-radius: 10px;
 }
 
 .redes-sociales a {
