@@ -1,145 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JJC Corporation EIRL - Consultora en Análisis de Datos</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbKbqI2fHLWb50YSeh2_JZxFGTOyRt38"></script>
-    <!-- Incluyendo Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>JJC Corporation EIRL</title>
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- boxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo-datos.png" alt="Logo de JJC Corporation EIRL" class="logo">
-            </div>
-            <nav class="segmentador">
-                <button onclick="location.href='#servicios'">Servicios</button>
-                <button onclick="location.href='#sobre-nosotros'">Sobre Nosotros</button>
-                <button onclick="location.href='#testimonios'">Testimonios</button>
-                <button onclick="location.href='#contacto'">Contacto</button>
-                <button onclick="location.href='#ubicacion'">Ubicación</button>
-                <button onclick="location.href='#dashboards'">Dashboards</button> <!-- Nuevo botón para Dashboards -->
-            </nav>
-            <h1>JJC Corporation EIRL</h1>
-            <p>Consultora en Análisis de Datos e Inteligencia de Negocios</p>
-        </div>
+    <header class="header">
+        <i class='bx bx-menu-alt-left' id="menu"></i>
+        <nav class="navbar"> 
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Proyect</a>
+            <a href="#">Contact</a>
+        </nav>   
+        <a href="#" class="logo">JJC Corporation</a> 
     </header>
-
-    <!-- Servicios -->
-    <section id="servicios" class="container">
-        <h2>Nuestros Servicios</h2>
-        <div class="servicios-lista">
-            <div class="servicio">
-                <h3>Desarrollo de Dashboards</h3>
-                <p>Creación de dashboards personalizados para una visualización efectiva de tus datos.</p>
+        <!--home-->
+        <section class="home" id="home">
+            <div class="home-img">
+                <img src="img/my.jpg">
             </div>
-            <div class="servicio">
-                <h3>Consultoría en BI</h3>
-                <p>Asesoría para optimizar la toma de decisiones basadas en datos.</p>
-            </div>
-            <div class="servicio">
-                <h3>Capacitación</h3>
-                <p>Entrenamiento en el uso de herramientas de análisis de datos, incluyendo Power BI.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Testimonios -->
-    <section id="testimonios" class="container">
-        <h2>Testimonios de Clientes</h2>
-        <div class="testimonio">
-            <p>"Gracias a JJC Corporation, nuestras decisiones están basadas en datos precisos y relevantes. ¡Altamente recomendados!"</p>
-            <p><strong>- Cliente Satisfecho</strong></p>
-        </div>
-        <div class="testimonio">
-            <p>"Su apoyo y asesoría han sido cruciales para nuestro crecimiento. Los dashboards son intuitivos y fáciles de usar."</p>
-            <p><strong>- Empresa XYZ</strong></p>
-        </div>
-    </section>
-
-    <!-- Contacto y WhatsApp -->
-    <section id="contacto" class="container">
-        <h2>Contáctanos</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-        <p>O contáctanos directamente por WhatsApp:</p>
-        <a href="https://wa.me/18293417496" target="_blank" class="whatsapp-button">
-            <img src="whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo"> Chatea con nosotros en WhatsApp
-        </a>
-    </section>
-
-    <!-- Dashboards Realizados -->
-    <section id="dashboards" class="container">
-        <h2>Dashboards Realizados</h2>
-        <div class="dashboards-lista">
-            <div class="dashboard">
-                <img src="dashboard1.jpg" alt="Dashboard 1" class="dashboard-img">
-                <p>Dashboard de Ventas</p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/francisco-j-b%C3%A1ez-gonz%C3%A1lez-900660235/"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
             </div>
-            <div class="dashboard">
-                <img src="dashboard2.jpg" alt="Dashboard 2" class="dashboard-img">
-                <p>Dashboard de Marketing</p>
-            </div>
-            <div class="dashboard">
-                <img src="dashboard3.jpg" alt="Dashboard 3" class="dashboard-img">
-                <p>Dashboard Financiero</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Ubicación -->
-    <section id="ubicacion" class="container">
-        <h2>Nuestra Ubicación</h2>
-        <div id="map" style="height: 400px; width: 100%;"></div>
-        <script>
-            function initMap() {
-                var location = { lat: 18.48577381756368, lng: -69.96459730000001 }; 
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 15,
-                    center: location
-                });
-                var marker = new google.maps.Marker({
-                    position: location,
-                    map: map
-                });
-            }
-            google.maps.event.addDomListener(window, 'load', initMap);
-        </script>
-    </section>
+            <div class="home-content">
+                <h2>Hola, soy</h2>
+                <h1>Thiago Baez</h1>
+                <h3>Y soy <span></span></h3>   
+                <p>Hijo de Francisco Baez y Jennifer Almonte, los cuales son muy bonitos padres y me aman mucho</p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 JJC Corporation EIRL - Todos los derechos reservados.</p>
-            <div class="redes-sociales">
-                <a href="https://facebook.com" target="_blank">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <i class="fab fa-twitter"></i> Twitter
-                </a>
-                <a href="https://www.instagram.com/jjccorporation/" target="_blank">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="https://www.linkedin.com/in/francisco-j-báez-gonzález-900660235" target="_blank">
-                    <i class="fab fa-linkedin-in"></i> LinkedIn
-                </a>
+                <button class="btn">Descargar CV <i class='bx bxs-download'></i></button>
+
             </div>
-        </div>
-    </footer>
 
+
+        </section>
+        
+        <!--footer-->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyrigth &copy; 2024 by Francisco Baez <span style="color: red;">hub</span> | All Rigth Reserved</p>
+            </div>
+        </footer>
+
+
+    <!-- script.js -->
     <script src="script.js"></script>
 </body>
+
 </html>
